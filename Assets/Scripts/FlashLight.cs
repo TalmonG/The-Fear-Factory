@@ -5,13 +5,14 @@ using UnityEngine;
 public class FlashLight : MonoBehaviour
 {
 
-    GameObject flashLight;
-    //bool click
+    public GameObject flashLight;
+    public bool click;
 
     // Start is called before the first frame update
     void Start()
     {
         flashLight.SetActive(false);
+        bool click = false;
     }
 
     // Update is called once per frame
@@ -21,10 +22,14 @@ public class FlashLight : MonoBehaviour
         {
             flashLight.SetActive(true);
         }
-
-        if (Input.GetMouseButtonDown(0))
+        /*else
         {
-            flashLight.SetActive(true);
+            flashLight.SetActive(false);
+        }*/
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            flashLight.SetActive(false);
         }
 
     }
