@@ -12,7 +12,6 @@ public class FlashLight : MonoBehaviour
     void Start()
     {
         flashLight.SetActive(false);
-        bool click = false;
     }
 
     // Update is called once per frame
