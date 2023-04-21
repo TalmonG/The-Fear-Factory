@@ -6,6 +6,7 @@ public class NoteOne : MonoBehaviour
 {
     public NoteButtonsOne noteButtonsOne;
     public MouseLook mouseLook;
+    public Accessibility accessibility;
 
     public GameObject noteOneObject;
     public GameObject noteUIOneObject;
@@ -45,6 +46,11 @@ public class NoteOne : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             mouseLook.isMousePaused = true;
             ableCollectNoteOne = false;
+
+            if (accessibility.IsNarratorEnabled == true)
+            {
+                FindObjectOfType<AudioManager>().Play("Mr. Winters");
+            }
 
 
 
