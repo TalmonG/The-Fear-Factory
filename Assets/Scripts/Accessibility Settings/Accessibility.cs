@@ -29,11 +29,28 @@ public class Accessibility : MonoBehaviour
     {
         if (on)
         {
-            Debug.Log("ON");
+            IsNarratorEnabled = true;
+            Debug.Log("Narr ON");
         }
         else
         {
-            Debug.Log("OFF");
+            IsNarratorEnabled = false;
+            Debug.Log("Narr OFF");
+        }
+
+    }
+
+    public void CheckSubtitle(bool on)
+    {
+        if (on)
+        {
+            IsSubtitlesEnabled = true;
+            Debug.Log("Sub ON");
+        }
+        else
+        {
+            IsSubtitlesEnabled = false;
+            Debug.Log("Sub OFF");
         }
 
     }

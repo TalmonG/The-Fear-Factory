@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DoorsUnlock : MonoBehaviour
 {
+    public Accessibility accessibility;
+
     public GameObject RedDoor;
     public CardSwipers CardSwipers;
     [SerializeField] private Animator animator;
@@ -28,8 +30,15 @@ public class DoorsUnlock : MonoBehaviour
             animator.SetBool("RedDoorOpen", true);
             FindObjectOfType<AudioManager>().Play("Suspense");
             DoorOpenStatus = true;
-            FindObjectOfType<AudioManager>().Play("Nice");
-            StartCoroutine(RedDoorUnlockTextTimer());
+
+            if (accessibility.IsNarratorEnabled == true)
+            {
+                FindObjectOfType<AudioManager>().Play("Nice");
+            }
+            if (accessibility.IsSubtitlesEnabled == true)
+            {
+                StartCoroutine(RedDoorUnlockTextTimer());
+            }
 
 
         }
