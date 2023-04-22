@@ -14247,7 +14247,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d6bd04fc86a117b44b1079b65af173a5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.125
+  m_Volume: 0.07
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -21437,6 +21437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteButtonsFive: {fileID: 28188573}
   mouseLook: {fileID: 1428155951}
+  accessibility: {fileID: 1979279177}
   noteFiveObject: {fileID: 1959846099}
   noteUIFiveObject: {fileID: 705094006}
   e: {fileID: 2046745434}
@@ -24072,6 +24073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteButtonsThree: {fileID: 1754751755}
   mouseLook: {fileID: 1428155951}
+  accessibility: {fileID: 1979279177}
   noteThreeObject: {fileID: 1636075295}
   noteUIThreeObject: {fileID: 264230357}
   e: {fileID: 461851754}
@@ -32154,6 +32156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteButtonsTwo: {fileID: 408906753}
   mouseLook: {fileID: 1428155951}
+  accessibility: {fileID: 1979279177}
   noteTwoObject: {fileID: 1581678177}
   noteUITwoObject: {fileID: 839068846}
   e: {fileID: 1355812126}
@@ -48697,7 +48700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1664939261
 Transform:
   m_ObjectHideFlags: 0
@@ -49099,6 +49102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteButtonsFour: {fileID: 1278615992}
   mouseLook: {fileID: 1428155951}
+  accessibility: {fileID: 1979279177}
   noteFourObject: {fileID: 652233076}
   noteUIFourObject: {fileID: 1747399572}
   e: {fileID: 1455962194}
@@ -49207,6 +49211,26 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Mr. Winters
     clip: {fileID: 8300000, guid: 22a98565acd3c0a47a0dcaaebe71a187, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Note 2
+    clip: {fileID: 8300000, guid: 551477ac1ade18d4bbccd253b59bf7f3, type: 3}
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+  - name: Note 3
+    clip: {fileID: 8300000, guid: 0df04accdf63e7843b2e66b359a9c419, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: Note 4
+    clip: {fileID: 8300000, guid: 235bea1520f714a43af03707885be683, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Note 5
+    clip: {fileID: 8300000, guid: e6ab1c298a5bce148b7d7582c72634b0, type: 3}
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
