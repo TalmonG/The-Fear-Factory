@@ -8,22 +8,37 @@ public class GettingCaughtVideoScript : MonoBehaviour
     public GameObject VideoScreen;
 
     public VideoPlayer myVideoPlayer;
-    // Start is called before the first frame update
+
+    public int count;
+
+    public bool isplayercaught;
+    
     void Start()
     {
-        VideoScreen.SetActive(true);
-        myVideoPlayer.loopPointReached += DoSomethingWhenVideoFinish;
+        count = 1;
+        VideoScreen.SetActive(false);
+        //VideoScreen.SetActive(true);
+        VideoScreen.SetActive(false);
+        //myVideoPlayer.loopPointReached += DoSomethingWhenVideoFinish;
+        isplayercaught = false;
     }
 
     void DoSomethingWhenVideoFinish(VideoPlayer vp)
     {
-        Debug.Log("Video is doneeee");
         VideoScreen.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isplayercaught == true && count == 1)
+        {
+            
+            VideoScreen.SetActive(true);
+            myVideoPlayer.Play();
+            Debug.Log("STUPEDDDD");
+            count = 0;
 
+        }
     }
 }

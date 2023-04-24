@@ -2,29 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorOneTrigger : MonoBehaviour
+public class MonsterChase : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
 
+    public GameObject monster;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        monster.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnTriggerEnter(Collider player)
     {
         if (player.gameObject.tag == "Player")
         {
-            animator.SetBool("DoorOneClose", true);
-            Debug.Log("Animation was played");
+            monster.SetActive(true);
         }
     }
+
 }
