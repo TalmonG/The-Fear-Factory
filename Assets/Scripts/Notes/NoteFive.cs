@@ -6,6 +6,7 @@ public class NoteFive : MonoBehaviour
 {
     public NoteButtonsFive noteButtonsFive;
     public MouseLook mouseLook;
+    public Accessibility accessibility;
 
     public GameObject noteFiveObject;
     public GameObject noteUIFiveObject;
@@ -46,7 +47,10 @@ public class NoteFive : MonoBehaviour
             mouseLook.isMousePaused = true;
             ableCollectNoteFive = false;
 
-
+            if (accessibility.IsNarratorEnabled == true)
+            {
+                FindObjectOfType<AudioManager>().Play("Note 5");
+            }
 
         }
 

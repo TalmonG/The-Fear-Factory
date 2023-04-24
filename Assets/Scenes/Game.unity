@@ -3360,6 +3360,101 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434783734}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &445102560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445102561}
+  - component: {fileID: 445102564}
+  - component: {fileID: 445102563}
+  - component: {fileID: 445102562}
+  m_Layer: 0
+  m_Name: NotePad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &445102561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445102560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.398}
+  m_LocalScale: {x: 0.5245677, y: 0.04305617, z: 0.79085}
+  m_Children: []
+  m_Father: {fileID: 566977505}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &445102562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445102560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &445102563
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445102560}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &445102564
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445102560}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &461851754
 GameObject:
   m_ObjectHideFlags: 0
@@ -13763,6 +13858,7 @@ Transform:
   - {fileID: 23593469}
   - {fileID: 410370129}
   - {fileID: 1625228424}
+  - {fileID: 445102561}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14247,7 +14343,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d6bd04fc86a117b44b1079b65af173a5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.125
+  m_Volume: 0.07
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -21533,6 +21629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteButtonsFive: {fileID: 28188573}
   mouseLook: {fileID: 1428155951}
+  accessibility: {fileID: 1979279177}
   noteFiveObject: {fileID: 1959846099}
   noteUIFiveObject: {fileID: 705094006}
   e: {fileID: 2046745434}
@@ -24168,6 +24265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteButtonsThree: {fileID: 1754751755}
   mouseLook: {fileID: 1428155951}
+  accessibility: {fileID: 1979279177}
   noteThreeObject: {fileID: 1636075295}
   noteUIThreeObject: {fileID: 264230357}
   e: {fileID: 461851754}
@@ -32250,6 +32348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteButtonsTwo: {fileID: 408906753}
   mouseLook: {fileID: 1428155951}
+  accessibility: {fileID: 1979279177}
   noteTwoObject: {fileID: 1581678177}
   noteUITwoObject: {fileID: 839068846}
   e: {fileID: 1355812126}
@@ -48793,7 +48892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1664939261
 Transform:
   m_ObjectHideFlags: 0
@@ -49195,6 +49294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteButtonsFour: {fileID: 1278615992}
   mouseLook: {fileID: 1428155951}
+  accessibility: {fileID: 1979279177}
   noteFourObject: {fileID: 652233076}
   noteUIFourObject: {fileID: 1747399572}
   e: {fileID: 1455962194}
@@ -49303,6 +49403,26 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Mr. Winters
     clip: {fileID: 8300000, guid: 22a98565acd3c0a47a0dcaaebe71a187, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Note 2
+    clip: {fileID: 8300000, guid: 551477ac1ade18d4bbccd253b59bf7f3, type: 3}
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+  - name: Note 3
+    clip: {fileID: 8300000, guid: 0df04accdf63e7843b2e66b359a9c419, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: Note 4
+    clip: {fileID: 8300000, guid: 235bea1520f714a43af03707885be683, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Note 5
+    clip: {fileID: 8300000, guid: e6ab1c298a5bce148b7d7582c72634b0, type: 3}
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
