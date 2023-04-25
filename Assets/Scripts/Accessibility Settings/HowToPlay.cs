@@ -17,6 +17,7 @@ public class HowToPlay : MonoBehaviour
         wPanel.SetActive(true);
         aPanel.SetActive(false);
         sPanel.SetActive(false);
+        dPanel.SetActive(false);
         ePanel.SetActive(false);
         whatgameispanel.SetActive(false);
     }
@@ -26,6 +27,7 @@ public class HowToPlay : MonoBehaviour
         wPanel.SetActive(true);
         aPanel.SetActive(false);
         sPanel.SetActive(false);
+        dPanel.SetActive(false);
         ePanel.SetActive(false);
         whatgameispanel.SetActive(false);
     }
@@ -35,6 +37,7 @@ public class HowToPlay : MonoBehaviour
         wPanel.SetActive(false);
         aPanel.SetActive(true);
         sPanel.SetActive(false);
+        dPanel.SetActive(false);
         ePanel.SetActive(false);
         whatgameispanel.SetActive(false);
     }
@@ -44,6 +47,17 @@ public class HowToPlay : MonoBehaviour
         wPanel.SetActive(false);
         aPanel.SetActive(false);
         sPanel.SetActive(true);
+        dPanel.SetActive(false);
+        ePanel.SetActive(false);
+        whatgameispanel.SetActive(false);
+    }
+
+    public void loaddpanel()
+    {
+        wPanel.SetActive(false);
+        aPanel.SetActive(false);
+        sPanel.SetActive(false);
+        dPanel.SetActive(true);
         ePanel.SetActive(false);
         whatgameispanel.SetActive(false);
     }
@@ -53,6 +67,7 @@ public class HowToPlay : MonoBehaviour
         wPanel.SetActive(false);
         aPanel.SetActive(false);
         sPanel.SetActive(false);
+        dPanel.SetActive(false);
         ePanel.SetActive(true);
         whatgameispanel.SetActive(false);
     }
@@ -62,6 +77,7 @@ public class HowToPlay : MonoBehaviour
         wPanel.SetActive(false);
         aPanel.SetActive(false);
         sPanel.SetActive(false);
+        dPanel.SetActive(false);
         ePanel.SetActive(false);
         whatgameispanel.SetActive(true);
     }
