@@ -6,9 +6,10 @@ public class MonsterChase : MonoBehaviour
 {
 
     public GameObject monster;
+    //[SerializeField] private Animator animator;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         monster.SetActive(false);
     }
@@ -24,6 +25,9 @@ public class MonsterChase : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             monster.SetActive(true);
+            //animator.SetBool("ClownOne", true);
+            //Debug.Log("Animation ClownOne was played");
+
         }
     }
 
