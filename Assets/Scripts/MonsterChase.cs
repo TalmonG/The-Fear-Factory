@@ -25,8 +25,7 @@ public class MonsterChase : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             monster.SetActive(true);
-            //animator.SetBool("ClownOne", true);
-            //Debug.Log("Animation ClownOne was played");
+            
 
         }
     }
