@@ -19,7 +19,7 @@ public class FinalDoor : MonoBehaviour
     {
         if (isFinalDoorOpen == true)
         {
-            animator.SetBool("RedDoFinalDoorAnimorOpen", true);
+            animator.SetBool("FinalDoorAnim", true);
         }
     }
 

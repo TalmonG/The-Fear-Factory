@@ -16,6 +16,8 @@ public class KeyPad : MonoBehaviour
     string alpha;
     public Text UiText = null;
 
+    public bool isAbleToOpenFinalDoor;
+
     private void Awake()
     {
         EPrompt.SetActive(false);
@@ -29,7 +31,7 @@ public class KeyPad : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && finalDoor.isFinalDoorOpen == false)
         {
             FindObjectOfType<AudioManager>().Play("Click");
             EPrompt.SetActive(false);
@@ -42,7 +44,7 @@ public class KeyPad : MonoBehaviour
 
     void OnTriggerEnter(Collider player)
     {
-        if (player.gameObject.tag == "Player")
+        if (player.gameObject.tag == "Player" && finalDoor.isFinalDoorOpen == false)
         {
             EPrompt.SetActive(true);
         }
@@ -74,7 +76,8 @@ public class KeyPad : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             mouseLook.isMousePaused = false;
-            keypad.SetActive(true);
+
+            keypad.SetActive(false);
 
         }
     }
