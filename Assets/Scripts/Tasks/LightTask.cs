@@ -30,11 +30,6 @@ public class LightTask : MonoBehaviour
         }
     }
 
-    IEnumerator RedKeyCardTextTimer()
-    {
-        yield return new WaitForSecondsRealtime(5);
-    }
-
     void OnTriggerEnter(Collider player)
     {
         if (player.gameObject.tag == "Player" && lightSwitchStatus == false)
