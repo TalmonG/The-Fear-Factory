@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class GettingCaughtVideoScript : MonoBehaviour
 {
@@ -9,7 +10,14 @@ public class GettingCaughtVideoScript : MonoBehaviour
 
     public VideoPlayer myVideoPlayer;
 
+    public MouseLook mouseLook;
+
+    public bool isPlaying;
+    public int timeToStop;
+
+
     public int count;
+    
 
     public bool isplayercaught;
     
@@ -33,12 +41,23 @@ public class GettingCaughtVideoScript : MonoBehaviour
     {
         if (isplayercaught == true && count == 1)
         {
-            
+            FindObjectOfType<AudioManager>().Play("CaughtSound");
             VideoScreen.SetActive(true);
             myVideoPlayer.Play();
             Debug.Log("STUPEDDDD");
             count = 0;
+            StartCoroutine(CoFunc());
 
         }
+    }
+
+    IEnumerator CoFunc()
+    {
+        yield return new WaitForSeconds(timeToStop);
+        Debug.Log("a");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        mouseLook.isMousePaused = true;
+        SceneManager.LoadScene(0);
     }
 }

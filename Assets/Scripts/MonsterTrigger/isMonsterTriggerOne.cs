@@ -23,7 +23,6 @@ public class isMonsterTriggerOne : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             gettingCaughtVideoScript.isplayercaught = true;
-            Debug.Log("YO MAMA");
         }
     }
 
@@ -32,7 +31,6 @@ public class isMonsterTriggerOne : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             gettingCaughtVideoScript.isplayercaught = true;
-            Debug.Log("YO MAMA");
         }
     }
 }

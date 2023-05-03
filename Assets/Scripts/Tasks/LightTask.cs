@@ -8,13 +8,19 @@ public class LightTask : MonoBehaviour
     public bool lightSwitchStatus = false;
 
     public GameObject lights;
+    public GameObject monsterStatue;
+    public GameObject dirtPath;
+    public GameObject holeCover;
 
     public GameObject EPrompt;
     private void Awake()
     {
         EPrompt.SetActive(false);
         lightSwitchStatus = false;
+        monsterStatue.SetActive(true);
+        holeCover.SetActive(true);
         lights.SetActive(false);
+        dirtPath.SetActive(false);
     }
 
     void OnTriggerStay(Collider player)
@@ -22,10 +28,15 @@ public class LightTask : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && lightSwitchStatus == false)
         {
             FindObjectOfType<AudioManager>().Play("Click");
+            FindObjectOfType<AudioManager>().Play("MonsterScreech");
+            FindObjectOfType<AudioManager>().Play("Breaking");
             lightSwitchStatus = true;
             Debug.Log("It was Switched");
             EPrompt.SetActive(false);
             lights.SetActive(true);
+            monsterStatue.SetActive(false);
+            holeCover.SetActive(false);
+            dirtPath.SetActive(true);
             Debug.Log("Lights are turned on now!");
         }
     }
