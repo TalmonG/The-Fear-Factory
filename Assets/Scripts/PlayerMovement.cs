@@ -4,6 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Notes References")]
+    public NoteOne noteOne;
+    public NoteTwo noteTwo;
+    public NoteThree noteThree;
+    public NoteFour noteFour;
+    public NoteFive noteFive;
+
+    [Header("Pin References")]
+    public GameObject pinOne;
+    public GameObject pinTwo;
+    public GameObject pinThree;
+    public GameObject pinFour;
+    public GameObject pinFive;
+
+    [Header("Papers References")]
+    public GameObject paper;
+    public bool isPaperShowing;
+
     [Header("Control Parameters")]
     //[SerializeField] Interact Interact;
     public CharacterController controller;
@@ -47,7 +65,16 @@ public class PlayerMovement : MonoBehaviour
     {
         playerCamera = GetComponentInChildren<Camera>();
         defaultYPos = playerCamera.transform.localPosition.y;
-    }
+        paper.SetActive(true);
+        isPaperShowing = true;
+
+        pinOne.SetActive(false);
+        pinTwo.SetActive(false);
+        pinThree.SetActive(false);
+        pinFour.SetActive(false);
+        pinFive.SetActive(false);
+
+}
 
 
 
@@ -60,6 +87,48 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(noteOne.isNoteCollected == true)
+        {
+            pinOne.SetActive(true);
+        }
+        if (noteTwo.isNoteCollected == true)
+        {
+            pinTwo.SetActive(true);
+        }
+        if (noteThree.isNoteCollected == true)
+        {
+            pinThree.SetActive(true);
+        }
+        if (noteFour.isNoteCollected == true)
+        {
+            pinFour.SetActive(true);
+        }
+        if (noteFive.isNoteCollected == true)
+        {
+            pinFive.SetActive(true);
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha1) && isPaperShowing == true)
+        {
+            paper.SetActive(false);
+            isPaperShowing = false;
+
+
+        }
+        else
+        {
+            if ((Input.GetKeyDown(KeyCode.Alpha1)) && isPaperShowing == false)
+            {
+                paper.SetActive(true);
+                isPaperShowing = true;
+            }
+        }
+        
+
+ 
+
 
         /*if (Input.GetKey(KeyCode.E) && RedKeyCardCollectable == true)
         {

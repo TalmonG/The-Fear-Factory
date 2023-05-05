@@ -10,6 +10,7 @@ public class NoteFive : MonoBehaviour
 
     public GameObject noteFiveObject;
     public GameObject noteUIFiveObject;
+    public bool isNoteCollected;
 
     public GameObject e;
     public bool ableCollectNoteFive;
@@ -17,6 +18,7 @@ public class NoteFive : MonoBehaviour
     void Awake()
     {
         noteUIFiveObject.SetActive(false);
+        isNoteCollected = false;
     }
 
     void Start()
@@ -51,6 +53,7 @@ public class NoteFive : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("Note 5");
             }
+            isNoteCollected = true;
 
         }
 

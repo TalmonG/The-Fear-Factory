@@ -31,13 +31,11 @@ public class LightTask : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("MonsterScreech");
             FindObjectOfType<AudioManager>().Play("Breaking");
             lightSwitchStatus = true;
-            Debug.Log("It was Switched");
             EPrompt.SetActive(false);
             lights.SetActive(true);
             monsterStatue.SetActive(false);
             holeCover.SetActive(false);
             dirtPath.SetActive(true);
-            Debug.Log("Lights are turned on now!");
         }
     }
 

@@ -10,6 +10,7 @@ public class NoteOne : MonoBehaviour
 
     public GameObject noteOneObject;
     public GameObject noteUIOneObject;
+    public bool isNoteCollected;
 
     public GameObject e;
     public bool ableCollectNoteOne;
@@ -17,6 +18,7 @@ public class NoteOne : MonoBehaviour
     void Awake()
     {
         noteUIOneObject.SetActive(false);
+        isNoteCollected = false;
     }
 
     void Start()
@@ -52,7 +54,7 @@ public class NoteOne : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Mr. Winters");
             }
 
-
+            isNoteCollected = true;
 
         }
 
