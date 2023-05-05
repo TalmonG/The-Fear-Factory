@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Game/New Lighting Settings.lighting.meta
+guid: e91c779372ad0a041a5c58e7fd91dd7b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+========
 guid: b018e0096728c9f4b8826eb8f5d3e844
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
+>>>>>>>> Jayden:Assets/Materials/Materials/41UWnqKCEqL (2).mat.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
