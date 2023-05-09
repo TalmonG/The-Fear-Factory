@@ -10,6 +10,7 @@ public class NoteTwo : MonoBehaviour
 
     public GameObject noteTwoObject;
     public GameObject noteUITwoObject;
+    public bool isNoteCollected;
 
     public GameObject e;
     public bool ableCollectNoteTwo;
@@ -17,6 +18,7 @@ public class NoteTwo : MonoBehaviour
     void Awake()
     {
         noteUITwoObject.SetActive(false);
+        isNoteCollected = false;
     }
 
     void Start()
@@ -51,6 +53,7 @@ public class NoteTwo : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("Note 2");
             }
+            isNoteCollected = true;
 
         }
 
