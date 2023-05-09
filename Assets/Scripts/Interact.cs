@@ -15,7 +15,6 @@ public class Interact : MonoBehaviour
     public GameObject RedE;
     public bool RedKeyCardCollectable;
     public GameObject RedKeyCard;
-    public GameObject RedKeyCardCollected;
 
     //KeyCards
     public GameObject RedKeyCardGameObject;
@@ -26,7 +25,6 @@ public class Interact : MonoBehaviour
     void Start()
     {
         RedInteractEImage.SetActive(false);
-        RedKeyCardCollected.SetActive(false);
         RedE.SetActive(false);
         RedKeyCardCollectable = false;
     }
@@ -51,7 +49,6 @@ public class Interact : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && RedKeyCardCollectable == true)
         {
             FindObjectOfType<AudioManager>().Play("Click");
-            RedKeyCardCollected.SetActive(true);
             KeyCards.redKeyCard = true;
             RedKeyCardGameObject.SetActive(false);
 

@@ -65,7 +65,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void Quit()
+    public void MainMenu()
     {
         pauseMenu.SetActive(false);
         progresslost.SetActive(true);
@@ -85,17 +85,13 @@ public class PauseMenu : MonoBehaviour
         settingsMenu.SetActive(true);
     }
 
-    public void YesQuit()
+    public void YesMainMenu()
     {
         Time.timeScale = 1f;
-        Debug.Log("QUIT!");
-        Application.Quit();
-    }
-
-    public void MainMenu()
-    {
         SceneManager.LoadScene(0);
     }
+
+    
 
     public void PlayGame()
     {
