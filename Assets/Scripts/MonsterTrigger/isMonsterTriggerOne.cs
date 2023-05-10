@@ -7,6 +7,7 @@ public class isMonsterTriggerOne : MonoBehaviour
 {
 
     public GettingCaughtVideoScript gettingCaughtVideoScript;
+    public MonsterTriggerOne monsterTriggerOne;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class isMonsterTriggerOne : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             gettingCaughtVideoScript.isplayercaught = true;
+            monsterTriggerOne.m_Play = false;
         }
     }
 
@@ -31,6 +33,7 @@ public class isMonsterTriggerOne : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             gettingCaughtVideoScript.isplayercaught = true;
+            monsterTriggerOne.m_Play = false;
         }
     }
 }

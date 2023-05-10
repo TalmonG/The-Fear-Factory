@@ -44,7 +44,6 @@ public class GettingCaughtVideoScript : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("CaughtSound");
             VideoScreen.SetActive(true);
             myVideoPlayer.Play();
-            Debug.Log("STUPEDDDD");
             count = 0;
             StartCoroutine(CoFunc());
 
@@ -54,7 +53,6 @@ public class GettingCaughtVideoScript : MonoBehaviour
     IEnumerator CoFunc()
     {
         yield return new WaitForSeconds(timeToStop);
-        Debug.Log("a");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         mouseLook.isMousePaused = true;

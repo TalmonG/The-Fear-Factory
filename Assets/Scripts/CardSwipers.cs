@@ -52,7 +52,6 @@ public class CardSwipers : MonoBehaviour
             redCardSwiper_StatusDenied.SetActive(false);
             redCardSwiper_StatusGranted.SetActive(true);
             redCardSwiperUnlockStatus = true;
-            Debug.Log("access granted");
 
 
         }
@@ -60,7 +59,6 @@ public class CardSwipers : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && KeyCards.redKeyCard == false)
         {
             
-            Debug.Log("I think i need a red KeyCard. Should be around here somewhere.");
 
             if (accessibility.IsNarratorEnabled == true)
             {
@@ -96,7 +94,6 @@ public class CardSwipers : MonoBehaviour
 
             if (player.gameObject.tag == "Player" && KeyCards.redKeyCard == false)
             {
-                Debug.Log("Find a red Keycard First!");
             }
         }
     }
