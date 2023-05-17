@@ -26,6 +26,7 @@ public class DoorSevenTrigger : MonoBehaviour
             //GetComponent<Animator>().Play("DoorOneClose");
             animator.SetBool("DoorSevenClose", true);
             Debug.Log("Animation was played");
+            
         }
     }
 }
