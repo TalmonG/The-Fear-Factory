@@ -25,6 +25,7 @@ public class isMonsterTriggerOne : MonoBehaviour
         {
             gettingCaughtVideoScript.isplayercaught = true;
             monsterTriggerOne.m_Play = false;
+            FindObjectOfType<AudioManager>().Stop("Chase");
         }
     }
 
@@ -34,6 +35,7 @@ public class isMonsterTriggerOne : MonoBehaviour
         {
             gettingCaughtVideoScript.isplayercaught = true;
             monsterTriggerOne.m_Play = false;
+            FindObjectOfType<AudioManager>().Stop("Chase");
         }
     }
 }

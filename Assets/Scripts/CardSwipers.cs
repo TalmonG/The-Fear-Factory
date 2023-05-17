@@ -17,6 +17,7 @@ public class CardSwipers : MonoBehaviour
 
     [Header("Card Swipers Unlocked")]
     public bool redCardSwiperUnlockStatus = false;
+    public bool redKeyCardCollected = false;
 
     public bool redCardSwiperUsable;
 
@@ -46,11 +47,12 @@ public class CardSwipers : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && KeyCards.redKeyCard == true)
+        if (Input.GetKeyDown(KeyCode.E) && KeyCards.redKeyCard == true && redCardSwiperUnlockStatus == false)
         {
             FindObjectOfType<AudioManager>().Play("Click");
             redCardSwiper_StatusDenied.SetActive(false);
             redCardSwiper_StatusGranted.SetActive(true);
+            redCardSwiperE.SetActive(false);
             redCardSwiperUnlockStatus = true;
 
 
