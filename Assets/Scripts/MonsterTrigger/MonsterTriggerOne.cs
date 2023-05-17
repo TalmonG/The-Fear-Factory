@@ -39,7 +39,7 @@ public class MonsterTriggerOne : MonoBehaviour
             monster.SetActive(true);
             animator.SetBool("MonsterCrawlOne", true);
             Debug.Log("Animation MonsterCrawlOne was played");
-            FindObjectOfType<AudioManager>().Play("Chase2");
+            FindObjectOfType<AudioManager>().Play("Chase");
             m_Play = true;
         }
 
