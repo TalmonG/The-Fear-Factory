@@ -359,8 +359,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122402026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -129.07}
-  m_LocalScale: {x: 1.9611316, y: 1.9611316, z: 1.9611316}
+  m_LocalPosition: {x: 0, y: 0, z: -60.035}
+  m_LocalScale: {x: 1.2491624, y: 1.2491624, z: 1.2491624}
   m_Children:
   - {fileID: 2087421395}
   - {fileID: 603855094}
@@ -373,7 +373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.534, y: 29.675}
+  m_AnchoredPosition: {x: 2.9903, y: 25}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &139973130
@@ -696,15 +696,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190528638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 22.176}
+  m_LocalScale: {x: 0.63696, y: 0.63696, z: 0.63696}
   m_Children: []
   m_Father: {fileID: 494952352}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -4.3563, y: 6.0980024}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190528640
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 190528638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e65787dd863230b45bad9ee5a41876f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 9caccbe1d79c5e74cb246bb1020dad9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wPanel: {fileID: 2087421394}
@@ -1214,7 +1214,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 190528640}
         m_TargetAssemblyTypeName: HowToPlay, Assembly-CSharp
-        m_MethodName: loadwpanel
+        m_MethodName: loadapanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3539,7 +3539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.6296997, y: -47.758667}
+  m_AnchoredPosition: {x: 1.6296997, y: -35.5}
   m_SizeDelta: {x: 7048.3516, y: 602.5859}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1152480855
