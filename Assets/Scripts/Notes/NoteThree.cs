@@ -40,21 +40,23 @@ public class NoteThree : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && ableCollectNoteThree == true)
+        if (Input.GetKeyDown(KeyCode.E) || (Input.GetKeyDown(KeyCode.U)))
         {
-            noteUIThreeObject.SetActive(true);
-            FindObjectOfType<AudioManager>().Play("Click");
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            mouseLook.isMousePaused = true;
-            ableCollectNoteThree = false;
-
-            if (accessibility.IsNarratorEnabled == true)
+            if (ableCollectNoteThree == true)
             {
-                FindObjectOfType<AudioManager>().Play("Note 3");
-            }
-            isNoteCollected = true;
+                noteUIThreeObject.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Click");
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                mouseLook.isMousePaused = true;
+                ableCollectNoteThree = false;
 
+                if (accessibility.IsNarratorEnabled == true)
+                {
+                    FindObjectOfType<AudioManager>().Play("Note 3");
+                }
+                isNoteCollected = true;
+            }
         }
 
         if (noteButtonsThree.isCollectedNoteThree == true && ableCollectNoteThree == true)

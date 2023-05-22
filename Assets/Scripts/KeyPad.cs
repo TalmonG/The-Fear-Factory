@@ -31,14 +31,17 @@ public class KeyPad : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && finalDoor.isFinalDoorOpen == false)
+        if (Input.GetKeyDown(KeyCode.E) || (Input.GetKeyDown(KeyCode.U)))
         {
-            FindObjectOfType<AudioManager>().Play("Click");
-            EPrompt.SetActive(false);
-            keypad.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            mouseLook.isMousePaused = true;
+            if (finalDoor.isFinalDoorOpen == false)
+            {
+                FindObjectOfType<AudioManager>().Play("Click");
+                EPrompt.SetActive(false);
+                keypad.SetActive(true);
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                mouseLook.isMousePaused = true;
+            }
         }
     }
 

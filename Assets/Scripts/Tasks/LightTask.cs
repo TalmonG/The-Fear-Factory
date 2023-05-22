@@ -25,17 +25,20 @@ public class LightTask : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && lightSwitchStatus == false)
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.U))
         {
-            FindObjectOfType<AudioManager>().Play("Click");
-            FindObjectOfType<AudioManager>().Play("MonsterScreech");
-            FindObjectOfType<AudioManager>().Play("Breaking");
-            lightSwitchStatus = true;
-            EPrompt.SetActive(false);
-            lights.SetActive(true);
-            monsterStatue.SetActive(false);
-            holeCover.SetActive(false);
-            dirtPath.SetActive(true);
+            if (lightSwitchStatus == false)
+            {
+                FindObjectOfType<AudioManager>().Play("Click");
+                FindObjectOfType<AudioManager>().Play("MonsterScreech");
+                FindObjectOfType<AudioManager>().Play("Breaking");
+                lightSwitchStatus = true;
+                EPrompt.SetActive(false);
+                lights.SetActive(true);
+                monsterStatue.SetActive(false);
+                holeCover.SetActive(false);
+                dirtPath.SetActive(true);
+            }
         }
     }
 

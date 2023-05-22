@@ -40,21 +40,23 @@ public class NoteTwo : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && ableCollectNoteTwo == true)
+        if (Input.GetKeyDown(KeyCode.E) || (Input.GetKeyDown(KeyCode.U)))
         {
-            noteUITwoObject.SetActive(true);
-            FindObjectOfType<AudioManager>().Play("Click");
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            mouseLook.isMousePaused = true;
-            ableCollectNoteTwo = false;
-
-            if (accessibility.IsNarratorEnabled == true)
+            if (ableCollectNoteTwo == true)
             {
-                FindObjectOfType<AudioManager>().Play("Note 2");
-            }
-            isNoteCollected = true;
+                noteUITwoObject.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Click");
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                mouseLook.isMousePaused = true;
+                ableCollectNoteTwo = false;
 
+                if (accessibility.IsNarratorEnabled == true)
+                {
+                    FindObjectOfType<AudioManager>().Play("Note 2");
+                }
+                isNoteCollected = true;
+            }
         }
 
         if (noteButtonsTwo.isCollectedNoteTwo == true && ableCollectNoteTwo == true)

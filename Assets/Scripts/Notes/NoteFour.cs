@@ -40,21 +40,23 @@ public class NoteFour : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && ableCollectNoteFour == true)
+        if (Input.GetKeyDown(KeyCode.E) || (Input.GetKeyDown(KeyCode.U)))
         {
-            noteUIFourObject.SetActive(true);
-            FindObjectOfType<AudioManager>().Play("Click");
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            mouseLook.isMousePaused = true;
-            ableCollectNoteFour = false;
-
-            if (accessibility.IsNarratorEnabled == true)
+            if (ableCollectNoteFour == true)
             {
-                FindObjectOfType<AudioManager>().Play("Note 4");
-            }
-            isNoteCollected = true;
+                noteUIFourObject.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Click");
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                mouseLook.isMousePaused = true;
+                ableCollectNoteFour = false;
 
+                if (accessibility.IsNarratorEnabled == true)
+                {
+                    FindObjectOfType<AudioManager>().Play("Note 4");
+                }
+                isNoteCollected = true;
+            }
         }
 
         if (noteButtonsFour.isCollectedNoteFour == true && ableCollectNoteFour == true)

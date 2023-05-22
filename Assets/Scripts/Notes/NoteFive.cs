@@ -40,21 +40,23 @@ public class NoteFive : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && ableCollectNoteFive == true)
+        if (Input.GetKeyDown(KeyCode.E) || (Input.GetKeyDown(KeyCode.U)))
         {
-            noteUIFiveObject.SetActive(true);
-            FindObjectOfType<AudioManager>().Play("Click");
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            mouseLook.isMousePaused = true;
-            ableCollectNoteFive = false;
-
-            if (accessibility.IsNarratorEnabled == true)
+            if (ableCollectNoteFive == true)
             {
-                FindObjectOfType<AudioManager>().Play("Note 5");
-            }
-            isNoteCollected = true;
+                noteUIFiveObject.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Click");
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                mouseLook.isMousePaused = true;
+                ableCollectNoteFive = false;
 
+                if (accessibility.IsNarratorEnabled == true)
+                {
+                    FindObjectOfType<AudioManager>().Play("Note 5");
+                }
+                isNoteCollected = true;
+            }
         }
 
         if (noteButtonsFive.isCollectedNoteFive == true && ableCollectNoteFive == true)

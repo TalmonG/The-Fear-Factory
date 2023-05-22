@@ -46,14 +46,15 @@ public class Interact : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && RedKeyCardCollectable == true)
+        if (Input.GetKeyDown(KeyCode.E) || (Input.GetKeyDown(KeyCode.U)))
         {
-            FindObjectOfType<AudioManager>().Play("Click");
-            KeyCards.redKeyCard = true;
-            RedKeyCardGameObject.SetActive(false);
-
+            if (RedKeyCardCollectable == true)
+            {
+                FindObjectOfType<AudioManager>().Play("Click");
+                KeyCards.redKeyCard = true;
+                RedKeyCardGameObject.SetActive(false);
+            }
         }
-
     }
 
     void OnTriggerExit(Collider player)

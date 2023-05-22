@@ -37,55 +37,55 @@ public class CardSwipers : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.E) && KeyCards.redKeyCard == true)
-        {
-        
-        }
-    }
+
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && KeyCards.redKeyCard == true && redCardSwiperUnlockStatus == false)
+        if (player.gameObject.tag == "Player" && redCardSwiperUnlockStatus == true)
         {
-            FindObjectOfType<AudioManager>().Play("Click");
-            redCardSwiper_StatusDenied.SetActive(false);
-            redCardSwiper_StatusGranted.SetActive(true);
             redCardSwiperE.SetActive(false);
-            redCardSwiperUnlockStatus = true;
-
-
         }
-
-        if (Input.GetKeyDown(KeyCode.E) && KeyCards.redKeyCard == false)
+            if (Input.GetKeyDown(KeyCode.E) || (Input.GetKeyDown(KeyCode.U)))
         {
-            
-
-            if (accessibility.IsNarratorEnabled == true)
+            if (KeyCards.redKeyCard == true && redCardSwiperUnlockStatus == false)
             {
-                FindObjectOfType<AudioManager>().Play("Red Key Card");
+                FindObjectOfType<AudioManager>().Play("Click");
+                redCardSwiper_StatusDenied.SetActive(false);
+                redCardSwiper_StatusGranted.SetActive(true);
+                redCardSwiperE.SetActive(true);
+                redCardSwiperUnlockStatus = true;
+                Debug.Log("DDDDDDD");
+
             }
 
-            if (accessibility.IsSubtitlesEnabled == true)
+
+        }
+        if ((Input.GetKeyDown(KeyCode.E) || (Input.GetKeyDown(KeyCode.U))))
+        {
+            if (KeyCards.redKeyCard == false)
             {
-                redKeyCardText.SetActive(true);
-                StartCoroutine(RedKeyCardTextTimer());
+                if (accessibility.IsNarratorEnabled == true)
+                {
+                    FindObjectOfType<AudioManager>().Play("Red Key Card");
+                }
+
+                if (accessibility.IsSubtitlesEnabled == true)
+                {
+                    redKeyCardText.SetActive(true);
+                    StartCoroutine(RedKeyCardTextTimer());
+                }
             }
+
+        }
+
+        IEnumerator RedKeyCardTextTimer()
+        {
+            redKeyCardText.SetActive(true);
+            yield return new WaitForSecondsRealtime(5);
+            redKeyCardText.SetActive(false);
         }
     }
-
-    IEnumerator RedKeyCardTextTimer()
-    {
-        redKeyCardText.SetActive(true);
-        yield return new WaitForSecondsRealtime(5);
-        redKeyCardText.SetActive(false);
-    }
-
-    public void SpawnRedKeyCardTextGameObject()
-    {
-        //dialogue.DestroyObjectDelayed();
-    }
+        
 
     void OnTriggerEnter(Collider player)
     {
@@ -102,10 +102,17 @@ public class CardSwipers : MonoBehaviour
 
     void OnTriggerExit(Collider player)
     {
+        if (player.gameObject.tag == "Player" && redCardSwiperUnlockStatus == true)
+        {
+            redCardSwiperE.SetActive(false);
+            redCardSwiperUsable = false;
+        }
+
         if (player.gameObject.tag == "Player" && redCardSwiperUnlockStatus == false)
         {
             redCardSwiperE.SetActive(false);
             redCardSwiperUsable = false;
         }
     }
+
 }

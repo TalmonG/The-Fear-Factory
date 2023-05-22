@@ -40,24 +40,25 @@ public class NoteOne : MonoBehaviour
 
     void OnTriggerStay(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.E) && ableCollectNoteOne == true)
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.U))
         {
-            noteUIOneObject.SetActive(true);
-            FindObjectOfType<AudioManager>().Play("Click");
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            mouseLook.isMousePaused = true;
-            ableCollectNoteOne = false;
-
-            if (accessibility.IsNarratorEnabled == true)
+            if (ableCollectNoteOne == true)
             {
-                FindObjectOfType<AudioManager>().Play("Mr. Winters");
+                noteUIOneObject.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Click");
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                mouseLook.isMousePaused = true;
+                ableCollectNoteOne = false;
+
+                if (accessibility.IsNarratorEnabled == true)
+                {
+                    FindObjectOfType<AudioManager>().Play("Mr. Winters");
+                }
+
+                isNoteCollected = true;
             }
-
-            isNoteCollected = true;
-
         }
-
         if (noteButtonsOne.isCollectedNoteOne == true && ableCollectNoteOne == true)
         {
             noteOneObject.SetActive(false);
